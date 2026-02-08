@@ -1,0 +1,91 @@
+/* Background */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: linear-gradient(135deg, #6e8efb, #a777e3);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Main box (simple structure + glass effect) */
+.box {
+    width: 420px;
+    padding: 25px;
+    background: rgba(255, 255, 255, 0.72);
+    backdrop-filter: blur(12px);
+    border-radius: 16px;
+    text-align: center;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+    animation: fadeIn 0.7s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(25px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Title */
+h2 {
+    color: #222;
+    margin-bottom: 18px;
+}
+
+/* Textarea */
+textarea {
+    width: 90%;
+    height: 120px;
+    border-radius: 12px;
+    padding: 12px;
+    border: 2px solid #dedede;
+    resize: none;
+    font-size: 16px;
+    outline: none;
+    transition: 0.25s;
+}
+
+textarea:focus {
+    border-color: #6e8efb;
+    box-shadow: 0 0 6px #6e8efb;
+}
+
+/* Button */
+button {
+    padding: 12px 25px;
+    background: #6e8efb;
+    border: none;
+    color: white;
+    font-size: 17px;
+    cursor: pointer;
+    border-radius: 10px;
+    margin-top: 10px;
+    width: 95%;
+    transition: 0.25s;
+}
+
+button:hover {
+    background: #5a78e8;
+}
+
+/* Result box */
+.result {
+    margin-top: 18px;
+    padding: 12px;
+    border-radius: 10px;
+    font-weight: bold;
+    animation: fadeIn 0.5s ease;
+}
+
+/* Spam */
+.spam {
+    background: #ffd7d7;
+    color: #c40000;
+}
+
+/* Not spam */
+.ham {
+    background: #d7ffd9;
+    color: #008800;
+}
